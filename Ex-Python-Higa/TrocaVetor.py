@@ -1,3 +1,20 @@
+def troca(N: list):
+    i = 0
+    j = 19
+
+    while i < j:
+        temp = N[i]
+        N[i] = N[j]
+        N[j] = temp
+        i += 1
+        j -= 1
+
+#===================================
+
+def imprime(N: list):
+    for i in range(len(N)):
+        print(f"N[{i}] = {N[i]}")
+
 #===================================
 
 def main():
@@ -7,7 +24,10 @@ def main():
         N.append(num)
 
     troca(N)
+    
     imprime(N)
     
 
 #===================================
+
+main()
