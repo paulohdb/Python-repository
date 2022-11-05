@@ -1,3 +1,8 @@
-for i in range(12, 0, -1):
+oi = 1
+io = 11
 
-    print(i)
+for i in range(io, 6, -1):
+
+    for j in range(oi, i):
+
+        print(i, j)
