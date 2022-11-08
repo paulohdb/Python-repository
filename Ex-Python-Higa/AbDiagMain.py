@@ -1,34 +1,17 @@
-def verifica(question: str, matriz: list, p: int):
+def verifica(matriz: list, p: int):
 
-    soma = media = cont = con = 0
+    soma = con = 0
 
-    if question == "S":
+    for i in range(1, p):
 
-        for i in range(1, p):
+        for j in range(i):
 
-            for j in range(i):
+            soma += matriz[i][j]
+            con += 1
+    
+    return soma, con
 
-                soma += matriz[i][j]
-
-        
-        return soma
-
-    else:
-
-        for i in range(1, p):
-
-            for j in range(i):
-
-                media += matriz[i][j]
-                
-                con += 1
-
-        cont = media / con
-
-        return cont
             
-            
-
 def main():
 
     q = input()
@@ -43,8 +26,11 @@ def main():
 
             M[i][j] = float(input())
 
-    value = verifica(q, M, p)
+    value, conta = verifica(M, p)
 
-    print(f'{value:.1f}')
+    if q == "S":
+        print(f'{value:.1f}')
+    else:
+        print(f'{value/conta:.1f}')
 
 main()           
