@@ -1,5 +1,5 @@
 # Python Repository 🐍
-Codes and exercises using the programming language Ruby.
+Codes and exercises using the programming language Python.
 
 ## Ex-Python-Higa
 This folder contains all the basics topics to program in Python. Since basic variables to functions and use of libraries.
